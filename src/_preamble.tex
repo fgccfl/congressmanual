@@ -1,0 +1,54 @@
+% These input files contain shorthand and variables.
+\input{_version.tex}
+\input{_expansions.tex}
+
+% Material for the title page.
+\title{\Huge \textbf{Student Congress Manual}}
+\author{\LARGE \emph{Florida Gulf Coast Catholic Forensics League}\vspace{.125in}}
+\date{\Large Version \vv}
+
+% Margins and fonts.
+\usepackage[hmargin=1in,vmargin=1in]{geometry}
+\usepackage{libertine}
+
+% Header styles.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{.5pt}
+\renewcommand{\footrulewidth}{.5pt}
+\lhead{}
+\chead{\small \emph{FGCCFL Student Congress Manual}}
+\rhead{}
+\lfoot{\small Version \vv}
+\cfoot{}
+\rfoot{\small \thepage}
+
+% Custom header styles.
+\usepackage{sectsty}
+\sectionfont{\centering \huge \sffamily \bfseries}
+\subsectionfont{\Large \sffamily \bfseries}
+\subsubsectionfont{\normalsize \bfseries}
+\paragraphfont{\bfseries \sffamily}
+\subparagraphfont{\itshape}
+
+% Custom header numbering.
+\usepackage{chngcntr}
+\counterwithout{subsection}{section}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\S\ \arabic{subsection}}
+\renewcommand{\thesubsubsection}{\S\ \arabic{subsection}(\alph{subsubsection})}
+
+% Lists and counters.
+\usepackage{enumitem}
+
+% Vulgar fraction style, to preserve line spacing.
+\usepackage{nicefrac}
+
+% Allow verbatim text and (more importantly) the comment environment.
+\usepackage{verbatim}
+
+% Handle graphics nicely (if necessary).
+%\usepackage{graphicx}
+
+% The hyperref package must be the last thing in the preamble!
+\usepackage{hyperref}
