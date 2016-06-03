@@ -28,15 +28,21 @@
 \sectionfont{\centering \huge \sffamily \bfseries}
 \subsectionfont{\Large \sffamily \bfseries}
 \subsubsectionfont{\normalsize \bfseries}
-\paragraphfont{\bfseries \sffamily}
+\paragraphfont{\mdseries \scshape}
 \subparagraphfont{\itshape}
 
-% Custom header numbering.
 \usepackage{chngcntr}
 \counterwithout{subsection}{section}
+\counterwithin{subsubsection}{subsection}
 \renewcommand{\thesection}{}
 \renewcommand{\thesubsection}{\S\ \arabic{subsection}}
-\renewcommand{\thesubsubsection}{\S\ \arabic{subsection}(\alph{subsubsection})}
+\renewcommand{\thesubsubsection}{(\alph{subsubsection})}
+
+\usepackage{titlesec}
+\titleformat{\subsubsection}[runin]{\bfseries}{(\alph{subsubsection})}{0pt}{\ }[.]
+
+% Footnote formatting.
+\usepackage[hang,flushmargin,multiple]{footmisc}
 
 % Lists and counters.
 \usepackage{enumitem}

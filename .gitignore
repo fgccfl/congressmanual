@@ -1,7 +1,7 @@
 # Ignore all LaTeX temporary files.
 *.aux
 *.log
-*.synctex.gz
+*.synctex.gz*
 *.out
 
 # Also ignore DVI files in case any are generated.
